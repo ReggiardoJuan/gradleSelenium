@@ -2,12 +2,12 @@ name: Changelog CI
 
 on:
   release:
-    types: [ published ]
+    types: [published]
 
   workflow_dispatch:
     inputs:
       release:
-        description: 'Release'
+        description: "Release"
         required: true
 jobs:
   build:
@@ -22,7 +22,6 @@ jobs:
       - name: Run Changelog CI
         uses: saadmk11/changelog-ci@v1.1.2
         with:
-          config_file: 'changelog-ci-config.json'
           # Optional, you can provide any name for your changelog file,
           # We currently support Markdown (.md) and reStructuredText (.rst) files
           # defaults to `CHANGELOG.md` if not provided.
@@ -36,7 +35,7 @@ jobs:
           # defaults to `github-actions[bot]` if not provided.
           # committer_username: 'test'
           # committer_email: 'test@test.com'
-          # Optional, only required when you want to run Changelog CI 
+          # Optional, only required when you want to run Changelog CI
           # on an event other than `pull_request` event.
           # In this example `release_version` is fetched from `workflow_dispatch` events input.
           # You can use any other method to fetch the release version
@@ -44,3 +43,9 @@ jobs:
           release_version: ${{ github.event.release.tag_name || inputs.release }}
           # Optional
           github_token: ${{ secrets.token }}
+          changelog_type: "commit_message" # or 'pull_request'
+          header_prefix: "Version:"
+          commit_changelog: true
+          comment_changelog: true
+          include_unlabeled_changes: true
+          unlabeled_group_title: "Unlabeled Changes"
