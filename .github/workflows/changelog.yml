@@ -10,7 +10,8 @@ on:
         description: 'Release'
         required: true
 jobs:
-  build:
+  release:
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +23,7 @@ jobs:
       - name: Run Changelog CI
         uses: saadmk11/changelog-ci@v1.1.2
         with:
-          config_file: changelog-ci-config.yaml
+          config_file: ./.github/config/changelog-ci-config.yaml
           # Optional, you can provide any name for your changelog file,
           # We currently support Markdown (.md) and reStructuredText (.rst) files
           # defaults to `CHANGELOG.md` if not provided.
