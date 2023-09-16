@@ -7,6 +7,7 @@ on:
 jobs:
   release:
     name: Create Release
+    permissions: write-all
     concurrency: github-release
     environment:
       name: release
