@@ -1,16 +1,15 @@
-name: Changelog
+name: Changelog CI
+
 on:
   release:
-    types: [created, edited]
+    types: [ created ]
+
 jobs:
-  changelog:
-    runs-on: ubuntu-20.04
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: "✏️ Generate release changelog"
-        uses: heinrichreimer/github-changelog-generator-action@v2.3
-        with:
-          token: ${{ secrets.token }}
-          repo: 'ReggiardoJuan/gradleSelenium'
-          output: CHANGELOG.md
-      - run: |
-          cat CHANGELOG.md
+      - uses: actions/checkout@v2
+
+      - name: Run Changelog CI
+        uses: saadmk11/changelog-ci@v1.1.2
