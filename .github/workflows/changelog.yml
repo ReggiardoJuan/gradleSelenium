@@ -1,19 +1,29 @@
-name: Generate changelog
+name: Release
+
 on:
   release:
     types: [created, edited]
 
 jobs:
-  generate-changelog:
+  release:
+    name: Create Release
+    concurrency: github-release
+    environment:
+      name: release
+      url: https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - uses: BobAnkh/auto-generate-changelog@v1.2.5
-      with:
-        REPO_NAME: 'ReggiardoJuan/gradleSelenium'
-        ACCESS_TOKEN: ${{secrets.token}}
-        PATH: 'CHANGELOG-auto-generate-changelog.md'
-        COMMIT_MESSAGE: 'docs(CHANGELOG): update release notes'
-        TYPE: 'feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements,chore:Chores'
+      - uses: actions/checkout@v3
+      - name: Changelog
+        uses: ardalanamini/auto-changelog@master
+        id: changelog
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.token }}
+        with:
+          body: |
+            ${{ steps.changelog.outputs.changelog }}
+          prerelease: ${{ steps.changelog.outputs.prerelease }}
