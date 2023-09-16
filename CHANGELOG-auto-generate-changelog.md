@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [v1.0.2](https://github.com/ReggiardoJuan/gradleSelenium/releases/tag/v1.0.2) - 2023-09-16 21:22:37
+
+*No description*
+
 ## [v1.0.1](https://github.com/ReggiardoJuan/gradleSelenium/releases/tag/v1.0.1) - 2023-09-16 21:19:04
 
 Test conventional commit
