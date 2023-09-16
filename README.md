@@ -1,2 +1,2 @@
 # gradleSelenium
-Some description
+Some description updated
