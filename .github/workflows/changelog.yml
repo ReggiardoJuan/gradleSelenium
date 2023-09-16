@@ -11,5 +11,6 @@ jobs:
         with:
           token: ${{ secrets.token }}
           repo: 'ReggiardoJuan/gradleSelenium'
-          output: ./CHANGELOG-github-changelog-generator-action.md
-          exclude_labels: ""
+          output: CHANGELOG.md
+      - run: |
+          cat CHANGELOG.md
