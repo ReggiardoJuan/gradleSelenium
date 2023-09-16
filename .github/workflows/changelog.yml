@@ -1,30 +1,14 @@
-name: Release
-
+name: Changelog
 on:
   release:
-    types: [created, edited]
-
+    types:
+      - created
 jobs:
-  release:
-    name: Create Release
-    permissions: write-all
-    concurrency: github-release
-    environment:
-      name: release
-      url: https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}
-    runs-on: ubuntu-latest
-
+  changelog:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
-      - name: Changelog
-        uses: ardalanamini/auto-changelog@master
-        id: changelog
-
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.token }}
+      - name: "✏️ Generate release changelog"
+        uses: heinrichreimer/github-changelog-generator-action@v2.3
         with:
-          body: |
-            ${{ steps.changelog.outputs.changelog }}
-          prerelease: ${{ steps.changelog.outputs.prerelease }}
+          token: ${{ secrets.token }}
+          output: CHANGELOG-github-changelog-generator-action.md

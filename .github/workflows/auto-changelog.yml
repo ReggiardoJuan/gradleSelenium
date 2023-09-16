@@ -1,0 +1,30 @@
+# name: Release
+
+# on:
+#   release:
+#     types: [created, edited]
+
+# jobs:
+#   release:
+#     name: Create Release
+#     permissions: write-all
+#     concurrency: github-release
+#     environment:
+#       name: release
+#       url: https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Changelog
+#         uses: ardalanamini/auto-changelog@master
+#         id: changelog
+
+#       - name: Create Release
+#         uses: softprops/action-gh-release@v1
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.token }}
+#         with:
+#           body: |
+#             ${{ steps.changelog.outputs.changelog }}
+#           prerelease: ${{ steps.changelog.outputs.prerelease }}
