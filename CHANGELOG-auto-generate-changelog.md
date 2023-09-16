@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [v1.0.1](https://github.com/ReggiardoJuan/gradleSelenium/releases/tag/v1.0.1) - 2023-09-16 21:19:04
+
+Test conventional commit
+
+### Documentation
+
+- README:
+  - One line test to commit ([b047e08](https://github.com/ReggiardoJuan/gradleSelenium/commit/b047e0897c942f296cf045a231f5595ed6d4e3e2))
+
+### Chores
+
+- general:
+  - test yml add chore ([6d056ac](https://github.com/ReggiardoJuan/gradleSelenium/commit/6d056ac00ffee9de510d242351c8ca03ec152c39))
+
 ## [v1.0.0](https://github.com/ReggiardoJuan/gradleSelenium/releases/tag/v1.0.0) - 2023-09-16 21:04:20
 
 Test auto-generate-changelog
