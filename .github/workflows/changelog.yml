@@ -10,7 +10,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+      - name: Get context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - name: Run Changelog CI
         uses: saadmk11/changelog-ci@v1.1.2
         with:
@@ -32,6 +35,6 @@ jobs:
           # In this example `release_version` is fetched from `workflow_dispatch` events input.
           # You can use any other method to fetch the release version
           # such as environment variable or from output of another action
-          release_version: ${{ github.event.release.tag_name }}
+          release_version: ${{ github.ref }}
           # Optional
           github_token: ${{ secrets.token }}
