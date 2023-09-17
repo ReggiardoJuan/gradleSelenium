@@ -1,3 +1,14 @@
+# Version: v1.0.25
+
+
+#### Unlabeled Changes
+
+* [#2](https://github.com/ReggiardoJuan/gradleSelenium/pull/2): [Changelog CI] Add Changelog for Version v1.0.15
+* [#3](https://github.com/ReggiardoJuan/gradleSelenium/pull/3): chore: Add label
+* [#5](https://github.com/ReggiardoJuan/gradleSelenium/pull/5): [Changelog CI] Add Changelog for Version v1.0.17
+* [#6](https://github.com/ReggiardoJuan/gradleSelenium/pull/6): Algo
+
+
 # Version: v1.0.17
 
 * [8e2e33d](https://github.com/ReggiardoJuan/gradleSelenium/commit/8e2e33d6e8562b8c80071c1c4db29742d65d791a): chore: Add label
