@@ -4,6 +4,10 @@ on:
     types: [ published ]
 
   workflow_dispatch:
+    inputs:
+      release:
+        description: 'Release'
+        required: true
 
 jobs:
   generate-changelog:
