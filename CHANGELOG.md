@@ -1,5 +1,37 @@
 # CHANGELOG
 
+## Unreleased
+
+true
+
+### Feature
+
+- workflows:
+  - Replace changelog ([87a0545](https://github.com/ReggiardoJuan/gradleSelenium/commit/87a05450902f9300c2034e4102790275fd0d541b))
+  - Replace changelog ([2c2dc2f](https://github.com/ReggiardoJuan/gradleSelenium/commit/2c2dc2f3a1f9e207e8abebac4889346035f93401)) ([#6](https://github.com/ReggiardoJuan/gradleSelenium/pull/6))
+  - Replace changelog ([17ebc18](https://github.com/ReggiardoJuan/gradleSelenium/commit/17ebc18b89a65f08aeaacb155364e0a3c01573f8)) ([#6](https://github.com/ReggiardoJuan/gradleSelenium/pull/6))
+  - Replace changelog ([f8a8f4a](https://github.com/ReggiardoJuan/gradleSelenium/commit/f8a8f4af2af8c5596b73fdf87a3c2dff1174c115)) ([#6](https://github.com/ReggiardoJuan/gradleSelenium/pull/6))
+
+### Bug Fixes
+
+- general:
+  - changelog-ci config file ([459a1c3](https://github.com/ReggiardoJuan/gradleSelenium/commit/459a1c3eb077b9fd97b150bbe68b9151cfbadbad))
+  - changelog-ci config file ([ba85d81](https://github.com/ReggiardoJuan/gradleSelenium/commit/ba85d8169199b435e1e03d7dfa183a5c1ad84402))
+  - changelog-ci config file ([bb56ddf](https://github.com/ReggiardoJuan/gradleSelenium/commit/bb56ddf7ce5ffa25b3bac84b34b8b1ae57133489))
+  - changelog-ci config file ([c354ba4](https://github.com/ReggiardoJuan/gradleSelenium/commit/c354ba4f6e838d1bbef5a11b42b990c38ff8ad4b))
+  - changelog-ci config file ([98bd027](https://github.com/ReggiardoJuan/gradleSelenium/commit/98bd02721e4ab053e3f9660a7a77ab6ecd01d2fa))
+  - changelog-ci config file ([24eccce](https://github.com/ReggiardoJuan/gradleSelenium/commit/24eccceb81ace7b455dbfefb5fe800d79f934434))
+  - changelog-ci config file ([bb9ce98](https://github.com/ReggiardoJuan/gradleSelenium/commit/bb9ce989a43db97cf524e3f5514b9245b21d0784))
+  - changelog-ci config file ([1000390](https://github.com/ReggiardoJuan/gradleSelenium/commit/1000390e7f3306bebd9d096b522f7e54cb846d31))
+  - changelog-ci config file ([016a6a4](https://github.com/ReggiardoJuan/gradleSelenium/commit/016a6a4d2c2a8dc4bc5e5a8edda289b81fb806bc))
+  - changelog-ci config file ([1e1cb0e](https://github.com/ReggiardoJuan/gradleSelenium/commit/1e1cb0e6729d9d561754922782c20580f54faeba))
+
+### Chores
+
+- general:
+  - Add label ([560f98f](https://github.com/ReggiardoJuan/gradleSelenium/commit/560f98fdae29d208a7140cb74518c8a5a7a60dd7)) ([#6](https://github.com/ReggiardoJuan/gradleSelenium/pull/6))
+  - Add label ([8e2e33d](https://github.com/ReggiardoJuan/gradleSelenium/commit/8e2e33d6e8562b8c80071c1c4db29742d65d791a)) ([#3](https://github.com/ReggiardoJuan/gradleSelenium/pull/3))
+
 ## [v1.0.13](https://github.com/ReggiardoJuan/gradleSelenium/releases/tag/v1.0.13) - 2023-09-16 22:54:10
 
 Test changelog-ci
