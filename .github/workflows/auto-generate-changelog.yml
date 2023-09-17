@@ -1,19 +1,25 @@
-# name: Generate changelog
-# on:
-#   release:
-#     types: [created, edited]
+name: Generate changelog
+on:
+  release:
+    types: [ published ]
 
-# jobs:
-#   generate-changelog:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v2
-#       with:
-#         fetch-depth: 0
-#     - uses: BobAnkh/auto-generate-changelog@v1.2.5
-#       with:
-#         REPO_NAME: 'ReggiardoJuan/gradleSelenium'
-#         ACCESS_TOKEN: ${{secrets.token}}
-#         PATH: 'CHANGELOG-auto-generate-changelog.md'
-#         COMMIT_MESSAGE: 'docs(CHANGELOG): update release notes'
-#         TYPE: 'feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements,chore:Chores'
+  workflow_dispatch:
+    inputs:
+      release:
+        description: 'Release'
+        required: true
+
+jobs:
+  generate-changelog:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - uses: BobAnkh/auto-generate-changelog@v1.2.5
+      with:
+        REPO_NAME: 'ReggiardoJuan/gradleSelenium'
+        ACCESS_TOKEN: ${{secrets.token}}
+        PATH: 'CHANGELOG.md'
+        COMMIT_MESSAGE: 'docs(CHANGELOG): update release notes'
+        TYPE: 'feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements,chore:Chores'
