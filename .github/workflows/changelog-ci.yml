@@ -33,16 +33,22 @@ jobs:
 
       - name: Get Changelog Output
         run: |
-          echo "${{ steps.changelog-ci.outputs }}"
+          echo "${{ toJson(steps.changelog-ci.outputs) }}"
 
       - name: Get Changelog Output
         run: |
           echo $GITHUB_STEP_SUMMARY
 
-      - name: Merge Pull Request
-        uses: juliangruber/merge-pull-request-action@v1
-        with:
-          github-token: ${{ secrets.token }}
-          number: ${{github.event.pull_request.number}}
-          method: squash # merge rebase
-          repo: juliangruber/octokit-action
+      # - name: Merge Pull Request
+      #   uses: juliangruber/merge-pull-request-action@v1
+      #   with:
+      #     github-token: ${{ secrets.token }}
+      #     number: ${{github.event.pull_request.number}}
+      #     method: squash # merge rebase
+      #     repo: juliangruber/octokit-action
+
+      - name: automerge
+        uses: "pascalgn/automerge-action@v0.15.6"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: "[Changelog CI]"
