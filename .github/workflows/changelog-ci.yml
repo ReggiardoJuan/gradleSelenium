@@ -33,8 +33,7 @@ jobs:
 
       - name: Get Changelog Output
         run: |
-          echo "${{ steps.changelog-ci.outputs.changelog }}"
-          echo "${{ steps.changelog-ci.outputs.changelog }}" >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.changelog-ci.outputs }}"
 
       - name: Get Changelog Output
         run: |
@@ -44,6 +43,6 @@ jobs:
         uses: juliangruber/merge-pull-request-action@v1
         with:
           github-token: ${{ secrets.token }}
-          number: 9
+          number: ${{github.event.pull_request.number}}
           method: squash # merge rebase
           repo: juliangruber/octokit-action
