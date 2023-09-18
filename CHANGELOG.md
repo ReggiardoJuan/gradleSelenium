@@ -1,12 +1,14 @@
 # CHANGELOG
 
-## Unreleased
+## [v1.0.14](https://github.com/ReggiardoJuan/gradleSelenium/releases/tag/v1.0.14) - 2023-09-17 23:57:19
 
-true
+Test
 
 ### Feature
 
 - workflows:
+  - Empty dispatch ([4d3cb74](https://github.com/ReggiardoJuan/gradleSelenium/commit/4d3cb74a58fc83dee0899a9146e2896ab260c2e5))
+  - Remove things ([18d5344](https://github.com/ReggiardoJuan/gradleSelenium/commit/18d5344cbd647a042cd3a2e4a317e6ac8ec8b969))
   - Replace changelog ([87a0545](https://github.com/ReggiardoJuan/gradleSelenium/commit/87a05450902f9300c2034e4102790275fd0d541b))
   - Replace changelog ([2c2dc2f](https://github.com/ReggiardoJuan/gradleSelenium/commit/2c2dc2f3a1f9e207e8abebac4889346035f93401)) ([#6](https://github.com/ReggiardoJuan/gradleSelenium/pull/6))
   - Replace changelog ([17ebc18](https://github.com/ReggiardoJuan/gradleSelenium/commit/17ebc18b89a65f08aeaacb155364e0a3c01573f8)) ([#6](https://github.com/ReggiardoJuan/gradleSelenium/pull/6))
