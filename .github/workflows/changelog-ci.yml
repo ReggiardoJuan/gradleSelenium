@@ -19,6 +19,7 @@ jobs:
 
       - name: Run Changelog CI
         uses: saadmk11/changelog-ci@v1.1.2
+        id: changelog-ci
         with:
           config_file: ./.github/config/changelog-ci-config.yaml
           changelog_filename: CHANGELOG-changelog-ci.md
@@ -30,10 +31,19 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
 
+      - name: Get Changelog Output
+        run: |
+          echo "${{ steps.changelog-ci.outputs.changelog }}"
+          echo "${{ steps.changelog-ci.outputs.changelog }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Get Changelog Output
+        run: |
+          echo $GITHUB_STEP_SUMMARY
+
       - name: Merge Pull Request
         uses: juliangruber/merge-pull-request-action@v1
         with:
           github-token: ${{ secrets.token }}
-          number: 1
+          number: 9
           method: squash # merge rebase
           repo: juliangruber/octokit-action
