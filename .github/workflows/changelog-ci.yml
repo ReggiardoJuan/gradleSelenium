@@ -36,6 +36,7 @@ jobs:
           GITHUB_CI_OUTPUTS: ${{ toJson(steps.changelog-ci) }}
         run: |
           echo $GITHUB_CI_OUTPUTS
+          echo "${{github.event.repository.pulls_url}}"
 
       - name: automerge
         uses: "pascalgn/automerge-action@v0.15.6"
