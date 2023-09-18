@@ -32,20 +32,10 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
 
       - name: Get Changelog Output
+        env:
+          GITHUB_CI_OUTPUTS: ${{ toJson(steps.changelog-ci.outputs) }}
         run: |
-          echo "${{ toJson(steps.changelog-ci.outputs) }}"
-
-      - name: Get Changelog Output
-        run: |
-          echo $GITHUB_STEP_SUMMARY
-
-      # - name: Merge Pull Request
-      #   uses: juliangruber/merge-pull-request-action@v1
-      #   with:
-      #     github-token: ${{ secrets.token }}
-      #     number: ${{github.event.pull_request.number}}
-      #     method: squash # merge rebase
-      #     repo: juliangruber/octokit-action
+          echo $GITHUB_CI_OUTPUTS
 
       - name: automerge
         uses: "pascalgn/automerge-action@v0.15.6"
