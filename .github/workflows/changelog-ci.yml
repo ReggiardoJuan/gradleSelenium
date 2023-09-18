@@ -16,10 +16,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Get context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+
       - name: Run Changelog CI
         uses: saadmk11/changelog-ci@v1.1.2
         with:
@@ -27,6 +24,11 @@ jobs:
           changelog_filename: CHANGELOG-changelog-ci.md
           release_version: ${{ github.event.release.tag_name || inputs.release }}
           github_token: ${{ secrets.token }}
+
+      - name: Get context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
 
       - name: Merge Pull Request
         uses: juliangruber/merge-pull-request-action@v1
