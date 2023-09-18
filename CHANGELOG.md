@@ -52,16 +52,6 @@ Test changelog-ci
 - general:
   - changelog-ci config file ([065cf8b](https://github.com/ReggiardoJuan/gradleSelenium/commit/065cf8b846743f6e49fe7805041d891497352bc9))
 
-## [v1.0.11](https://github.com/ReggiardoJuan/gradleSelenium/releases/tag/v1.0.11) - 2023-09-16 22:40:07
-
-Test changelog-ci 
-
-### Bug Fixes
-
-- general:
-  - changelog-ci release update ([38983bf](https://github.com/ReggiardoJuan/gradleSelenium/commit/38983bfeab9eed2d841fcd9b08f16af19fb9b0b8))
-  - changelog-ci release ([4a251d1](https://github.com/ReggiardoJuan/gradleSelenium/commit/4a251d159c5ac8985911dd41db44ad890bf97741))
-
 ## [v1.0.9](https://github.com/ReggiardoJuan/gradleSelenium/releases/tag/v1.0.9) - 2023-09-16 22:32:37
 
 Test changelog-ci
