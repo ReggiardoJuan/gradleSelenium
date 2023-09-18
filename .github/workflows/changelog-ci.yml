@@ -42,7 +42,7 @@ jobs:
         uses: "pascalgn/automerge-action@v0.15.6"
         env:
           GITHUB_TOKEN: "${{ secrets.token }}"
-          MERGE_LABELS: "[Changelog CI]"
+          MERGE_LABELS: "Changelog"
           MERGE_METHOD: "squash"
           MERGE_COMMIT_MESSAGE: "Auto merge CHANGELOG.md"
           MERGE_DELETE_BRANCH: true
