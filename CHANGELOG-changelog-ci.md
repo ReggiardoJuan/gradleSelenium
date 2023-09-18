@@ -1,3 +1,18 @@
+# Version: v1.0.36
+
+* [d709c96](https://github.com/ReggiardoJuan/gradleSelenium/commit/d709c9688e10c4457263d719d86aecb035dbba27): fix(workflows): Update auto merge
+* [0063d0c](https://github.com/ReggiardoJuan/gradleSelenium/commit/0063d0c1409eb38f3f13a0ec5785ac313239f429): fix(workflows): Update auto merge
+* [8e7a94b](https://github.com/ReggiardoJuan/gradleSelenium/commit/8e7a94b185c5f0a43e5bb749af07697901eb71ef): fix(workflows): Update auto merge
+* [7820187](https://github.com/ReggiardoJuan/gradleSelenium/commit/7820187412a8def4df56b788e3b602b78c0aece3): fix(workflows): Get pull number
+* [3f3bc3e](https://github.com/ReggiardoJuan/gradleSelenium/commit/3f3bc3edb8790b0a4e0821bbfb71924a1f9d0b72): fix(workflows): Get pull number
+* [6a5a6fa](https://github.com/ReggiardoJuan/gradleSelenium/commit/6a5a6fa3af84d2cb54f4f37b732300c079f9251a): fix(workflows): Get context
+* [51cd30c](https://github.com/ReggiardoJuan/gradleSelenium/commit/51cd30c34355d92025f87a9eca5689d2bf08108e): fix(workflows): Change to commit
+* [635f15b](https://github.com/ReggiardoJuan/gradleSelenium/commit/635f15b6efe2d1e8eccbf8b993b7ccd268d3a6cb): fix(workflows): auto merge
+* [8db5016](https://github.com/ReggiardoJuan/gradleSelenium/commit/8db50167acaf290f4f9c4b4d7ff51fd9ec04658d): fix(workflows): write permissions
+* [914eb82](https://github.com/ReggiardoJuan/gradleSelenium/commit/914eb8217d4e07e3ff46b8098f0545df4bd67455): feat(workflows): new changelog
+* [6d0f445](https://github.com/ReggiardoJuan/gradleSelenium/commit/6d0f4454afa092d95cc945b1fe1d13cffbc258f7): docs(CHANGELOG): update release notes
+
+
 # Version: v1.0.25
 
 
