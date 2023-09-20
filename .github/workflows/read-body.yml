@@ -10,7 +10,8 @@ jobs:
             - name: Read body
               id: version
               run: |
-                echo ${{github.event.comment.body}}
+                echo ${{ toJson(github.event.comment.body) }}
+                echo ${{ toJson(github.event.comment) }}
 
 #     comment:
 #         runs-on: ubuntu-latest
