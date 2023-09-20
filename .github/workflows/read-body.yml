@@ -11,7 +11,7 @@ jobs:
               id: version
               run: |
                 echo ${{ toJson(github.event.comment.body) }}
-                echo ${{ toJson(github.event.comment) }}
+                echo ${{ toJson(github.event) }}
 
 #     comment:
 #         runs-on: ubuntu-latest
