@@ -8,44 +8,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Read body
-              id: version
+              id: comment
               run: |
-                echo ${{ toJson(github.event.comment.body) }}
-                echo ${{ toJson(github.event.comment) }}
-
-#     comment:
-#         runs-on: ubuntu-latest
-#         permissions: write-all
-#         steps:
-#             - uses: actions/checkout@v2
-#             - name: Set up Python
-#               uses: actions/setup-python@v1
-#               with:
-#                   python-version: "3.8"
-#             - name: Update version
-#               id: version
-#               run: |
-#                   echo "GITHUB_REF is a tag you set for the release"
-#                   echo "Your GitHub ref: ${GITHUB_REF}"
-#                   VERSION=`echo "${GITHUB_REF}" | cut -f 3 -d "/"`
-#                   echo "Preparing version ${VERSION}"
-#                   echo "__version__ = \"${VERSION}\"" > __version__.py
-#                   echo "##[set-output name=version;]$(echo ${VERSION})"
-#             - uses: vemel/update-changelog@0.0.1
-#               id: changelog
-#               with:
-#                   version: ${{ steps.version.outputs.version }}
-#             - name: Create Pull Request
-#               uses: peter-evans/create-pull-request@v2
-#               with:
-#                   commit-message: Release ${{ steps.version.outputs.version }}
-#                   labels: release, bot
-#                   title: "Release ${{ steps.version.outputs.version }}"
-#                   body: |
-#                       # Release ${{ steps.version.outputs.version }}
-
-#                       Merge this PR to update your version and changelog!
-
-#                       ## Included Pull Requests
-
-#                       ${{ steps.changelog.outputs.pulls_list_md }}
+                AZURE_TASK=$(echo "${{ github.event.pull_request.body }}" | grep -oP "(?<=AB)[0-9]+" | head -1)
+                echo $AZURE_TASK
+                [[ -n "$AZURE_TASK" ]] && echo "Not Empty"
