@@ -10,5 +10,5 @@ jobs:
             - name: Read body
               id: version
               run: |
-                azure_task = echo "${{ github.event.pull_request.body }}" | grep -oP AB[0-9]+
-                echo $azure_task
+                AZURE_TASK=$(echo ${{ github.event.pull_request.body }} | grep -oP AB[0-9]+)
+                echo $AZURE_TASK
