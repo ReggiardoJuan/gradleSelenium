@@ -10,7 +10,7 @@ jobs:
             - name: Read body
               id: comment
               run: |
-                echo "AZURE_TASK=$(echo ${{ github.event.pull_request.body }} | grep -oP (?<=AB)[0-9]+ | head -1)" >> $GITHUB_ENV
+                echo "AZURE_TASK=$(echo ${{ github.event.pull_request.body }} | grep -oP \"(?<=AB)[0-9]+\" | head -1)" >> $GITHUB_ENV
                 echo "${{env.AZURE_TASK}}"
                 if [[ -z "${{env.AZURE_TASK}}" ]]
                 then
