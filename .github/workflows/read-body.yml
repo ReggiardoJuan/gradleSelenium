@@ -8,10 +8,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Read body
-            id: comment
-            uses: actions/github-script@v3
-            with:
-            script: |
-                AZURE_TASK=$(echo "${{ github.event.pull_request.body }}" | grep -oP "(?<=AB)[0-9]+" | head -1)
-                echo $AZURE_TASK
-                [ -z $AZURE_TASK ] && ${{core.setFailed('Empty azure task')}}
+              id: comment
+              uses: actions/github-script@v3
+              with:
+                script: |
+                    AZURE_TASK=$(echo "${{ github.event.pull_request.body }}" | grep -oP "(?<=AB)[0-9]+" | head -1)
+                    echo $AZURE_TASK
+                    [ -z $AZURE_TASK ] && ${{core.setFailed('Empty azure task')}}
