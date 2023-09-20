@@ -1,12 +1,20 @@
-# name: Release
+name: Get body
 
-# on:
-#     release:
-#         types: [published]
+on:
+    release:
+        types: [published]
 
-#     workflow_dispatch:
+    workflow_dispatch:
 
-# jobs:
+jobs:
+    comment:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Read body
+              id: version
+              run: |
+                echo ${{github.event.comment.body}}
+
 #     comment:
 #         runs-on: ubuntu-latest
 #         permissions: write-all
